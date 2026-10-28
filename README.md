@@ -128,24 +128,5 @@ SQLite DB에서 고객 조회
 위험 등급: 저위험
 ```
 
-## 실행 방법
-
-프로젝트 루트에서 실행합니다. 원본 Excel, SQLite DB 및 학습된 joblib 파일은 저장소에 포함하지 않습니다.
-
-```bash
-pip install -r requirements.txt
-mkdir -p data models
-```
-
-원본 데이터를 `data/default of credit card clients.xls`에 준비한 뒤 다음 순서로 실행합니다.
-
-```bash
-python src/create_database.py
-python src/final_model_validation.py
-mv credit_default_model.joblib credit_default_threshold.joblib models/
-python src/predict_customer.py
-```
-
-`create_database.py`는 `data/credit_clients.db`를 생성합니다. 학습 스크립트는 프로젝트 루트에 모델과 Threshold 파일을 생성하므로, 예측 전에 위 명령으로 `models/`로 옮깁니다.
 
 `experiments/`에는 모델 비교, 특성 공학 및 하이퍼파라미터 탐색 코드가 있습니다.
