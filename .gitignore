@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+
+# Original datasets, SQLite databases and trained models
+*.[xX][lL][sS]
+*.[xX][lL][sS][xX]
+*.[dD][bB]
+*.db-*
+*.sqlite
+*.sqlite3
+*.[jJ][oO][bB][lL][iI][bB]
